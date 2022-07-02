@@ -9,7 +9,7 @@
 
 ## 技术栈
 
-![vue3](https://img.shields.io/badge/Vue-3.0-%2342b883)![pinia](https://img.shields.io/badge/pinia-%23ffd859)![element](https://img.shields.io/badge/Element-plus-%2359deff)
+![vue3](https://img.shields.io/badge/Vue-3.0-%2342b883)	![pinia](https://img.shields.io/badge/pinia-%23ffd859)	![element](https://img.shields.io/badge/Element-plus-%2359deff)
 
 ## 已完成的功能
 
