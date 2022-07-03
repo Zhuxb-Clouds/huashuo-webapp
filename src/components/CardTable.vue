@@ -1,6 +1,5 @@
 <template>
     <div>
-        <CardFilte />
         <CardPopup :IsShow="dialogVisible" :cardId="cardId" @closePopup="closePopup" />
         <div id="tableBox">
             <el-main>
