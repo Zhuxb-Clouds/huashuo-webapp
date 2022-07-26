@@ -20,7 +20,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 60px;
 }
 
 .author {
