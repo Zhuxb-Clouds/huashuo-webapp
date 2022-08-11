@@ -10,7 +10,7 @@ export const mainStore = defineStore('main', {
       cardTableData: <cardType[]>[],
       searchQuery: <queryType>{},
       cardTableDataTotal: 309,
-      pageSize: 15,
+      pageSize: 30,
       page: 1,
     }
   },
@@ -20,8 +20,8 @@ export const mainStore = defineStore('main', {
       this.typeOptions = await Api.getType()
       this.packOptions = await Api.getPack()
     },
-    async getCardById(id: number): Promise<cardType> {
-      return await Api.getCardById(id)
+    async getCardById(id: number) {
+      return await Api.getCardById(id) as any
     },
     async getCard(query?: queryType) {
       const res = await Api.getCard({ ...query, ...this.searchQuery, page: this.page }) as any;

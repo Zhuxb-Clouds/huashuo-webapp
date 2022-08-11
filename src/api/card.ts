@@ -1,9 +1,9 @@
 import req from '../libs/axios';
 import { queryType, optionType, cardType } from "../type/index";
 export default {
-    getCardById(id: number): Promise<cardType> {
+    getCardById(id: number): Promise<cardType[]> {
         return req({
-            url: `api/onecard`,
+            url: `api/Acard`,
             method: 'get',
             params: {
                 id: id,

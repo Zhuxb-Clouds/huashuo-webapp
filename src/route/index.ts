@@ -5,8 +5,8 @@ const router = createRouter({
     routes: [
         {
             path: '/',
-            name: 'cardtable',
-            component: () => import('../page/CardCURD.vue')
+            name: 'cardTable',
+            component: () => import('../views/cardList/cardCURD.vue')
         }
     ]
 })

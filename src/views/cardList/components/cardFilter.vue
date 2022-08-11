@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import { mainStore } from "../store/";
+import { mainStore } from "@/store/";
 import { storeToRefs } from 'pinia';
 
 const type = ref();

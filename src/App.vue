@@ -1,21 +1,22 @@
 <template>
-  <HomeHeader></HomeHeader>
-  <router-view></router-view>
-  <FooterFav />
+  <el-scrollbar height="100vh">
+    <HomeHeader></HomeHeader>
+    <router-view></router-view>
+    <FooterFav />
+  </el-scrollbar>
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
 import HomeHeader from './components/homeHeader.vue';
-import FooterFav from "./components/FooterView.vue";
+import FooterFav from "./components/homeFooter.vue";
 
-const router = useRouter()
 
 </script>
 
 <style>
 #app {
-  font-family: SerifCN;
+  font-family: 'Noto Serif SC';
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

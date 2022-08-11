@@ -2,7 +2,7 @@
     <header>
         <div class="header-container">
             <div class="header-logo">
-                <img src="../assets/飞雪logo.webp" alt="logo"
+                <img src="../assets/images/飞雪logo.webp" alt="logo"
                     style="width: auto; height: auto; max-width: 100%; max-height: 100%; filter:invert(100%);">.
                 <div class="header-nav">
                     <div class="link"> 联系 </div>
@@ -49,7 +49,6 @@ header {
 
 .link {
     display: block;
-    font-family: SerifCN;
     color: white;
     margin-left: 55px;
     font-weight: 600;
