@@ -1,5 +1,6 @@
 <template>
-    <el-dialog v-model="IsShow" title="卡牌信息" width="25vw" :before-close="handleClose" size="large">
+    <el-dialog v-model="IsShow" title="卡牌信息" width="35vw" :before-close="handleClose" size="large"
+        style="padding:50px;">
         <el-descriptions :column="2" direction="vertical">
             <el-descriptions-item label="卡牌类型" align="left">{{ curCard.type || "--" }}
             </el-descriptions-item>
@@ -57,6 +58,13 @@ const handleClose = () => {//新增弹窗内点击取消
 :deep(.el-descriptions__label.is-left) {
     color: rgb(92, 92, 92);
     font-weight: 600;
+    letter-spacing: 1px;
+}
+
+:deep(.el-descriptions__content.is-left) {
+    word-break: break-all;
+    white-space: break-spaces;
+    font-size: 18px;
     letter-spacing: 1px;
 }
 </style>
