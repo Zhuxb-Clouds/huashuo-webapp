@@ -5,7 +5,12 @@ const router = createRouter({
     routes: [
         {
             path: '/',
-            name: 'cardTable',
+            name: 'home',
+            component: () => import('../views/home/homeIndex.vue')
+        },
+        {
+            path: '/card',
+            name: 'card',
             component: () => import('../views/cardList/cardCURD.vue')
         }
     ]

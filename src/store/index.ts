@@ -24,11 +24,15 @@ export const mainStore = defineStore('main', {
       return await Api.getCardById(id) as any
     },
     async getCard(query?: queryType) {
-      const res = await Api.getCard({ ...query, ...this.searchQuery, page: this.page }) as any;
+      const res = await Api.getCard({ ...query, ...this.searchQuery, page: this.page, pageSize: this.pageSize }) as any;
       this.cardTableData = res.rows;
       this.cardTableDataTotal = res.count;
     },
-    search(type: number, pack: number, keyword: string) { this.searchQuery = { type: type, pack: pack, keyword: keyword } },
-    pageChange(page: number) { this.page = page },
+    search(type: number, pack: number, keyword: string) {
+      this.searchQuery = { type: type, pack: pack, keyword: keyword }
+    },
+    pageChange(page: number) {
+      this.page = page
+    },
   }
 })
