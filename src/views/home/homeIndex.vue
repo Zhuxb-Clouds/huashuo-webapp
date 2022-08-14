@@ -8,7 +8,7 @@
         <div class="function">
             <div class="cardList hvr-grow" @click="$router.push({ name: 'card' })">
                 <p>卡牌对照</p>
-                <img src="@/assets/images/qm.webp" alt="">
+                <img src="../../assets/images/qm.webp" alt="">
             </div>
             <div class="book hvr-grow" @click="download('https://pan.baidu.com/s/1FoKTphJkRtfb-qoBRWMNpg?pwd=y888')">
                 <p>规则书</p>
@@ -32,7 +32,7 @@ const download = (params: string | URL) => {
     padding-top: 5%;
 
     .slogan {
-        background: linear-gradient(to right, #fff, #ffffff80), url(@/assets/images/background.webp) center/70%;
+        background: linear-gradient(to right, #fff, #ffffff80), url(../../assets/images/background.webp) center/70%;
         width: 80%;
         height: 50vh;
         padding: 3%;
@@ -103,7 +103,7 @@ const download = (params: string | URL) => {
             z-index: -1;
             height: 100%;
             width: 100%;
-            background-image: url(@/assets/images/background2.webp);
+            background-image: url(../../assets/images/background2.webp);
             background-size: 150%;
             transition: all 1s;
         }
@@ -116,7 +116,7 @@ const download = (params: string | URL) => {
             z-index: -1;
             height: 100%;
             width: 100%;
-            background-image: url(@/assets/images/background2.webp);
+            background-image: url(../../assets/images/background2.webp);
             background-size: 150%;
             -webkit-filter: blur(5px);
             filter: blur(5px);
