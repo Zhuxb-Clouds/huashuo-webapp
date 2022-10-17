@@ -169,4 +169,15 @@ const download = (params: string | URL) => {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
 }
+
+@media(max-width: 1921px)and(min-width:1919px) {
+    img {
+        transform: scale(0.6);
+    }
+
+    #people {
+        left: -300px;
+        transform: scale(0.5);
+    }
+}
 </style>
