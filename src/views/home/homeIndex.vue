@@ -12,12 +12,7 @@
       <div class="cardList hvr-grow" @click="$router.push({ name: 'card' })">
         <p>卡牌对照</p>
       </div>
-      <div
-        class="book hvr-grow"
-        @click="
-          download('https://pan.baidu.com/s/1FoKTphJkRtfb-qoBRWMNpg?pwd=y888')
-        "
-      >
+      <div class="book hvr-grow" @click="$router.push({ name: 'ruleBook' })">
         <p>规则书</p>
       </div>
     </div>
@@ -25,9 +20,9 @@
 </template>
 
 <script setup lang="ts">
-const download = (params: string | URL) => {
-  window.open(params as URL);
-};
+// const download = (params: string | URL) => {
+//   window.open(params as URL);
+// };
 </script>
 
 <style scoped lang="less">

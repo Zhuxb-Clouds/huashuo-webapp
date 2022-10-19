@@ -12,6 +12,11 @@ const router = createRouter({
             path: '/card',
             name: 'card',
             component: () => import('../views/cardList/cardCURD.vue')
+        },
+        {
+            path: '/book',
+            name: 'ruleBook',
+            component: () => import('../views/ruleBook/ruleBookIndex.vue')
         }
     ]
 })
