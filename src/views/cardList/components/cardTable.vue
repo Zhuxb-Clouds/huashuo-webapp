@@ -98,18 +98,20 @@ const showBack = ref(true);
 const showAuthor = ref(true);
 
 watch(cardTableData, (val: cardType[]) => {
-  showBack.value =
-    val.filter((i) => {
-      if (i.back !== null && i.back !== "") {
-        return true;
-      }
-    }).length > 0;
-  showAuthor.value =
-    val.filter((i) => {
-      if (i.author !== null && i.author !== "") {
-        return true;
-      }
-    }).length > 0;
+  if (val) {
+    showBack.value =
+      val.filter((i) => {
+        if (i.back !== null && i.back !== "") {
+          return true;
+        }
+      }).length > 0;
+    showAuthor.value =
+      val.filter((i) => {
+        if (i.author !== null && i.author !== "") {
+          return true;
+        }
+      }).length > 0;
+  }
 });
 </script>
 

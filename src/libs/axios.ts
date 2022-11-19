@@ -13,11 +13,12 @@ const req = axios.create({
 req.interceptors.response.use(
     response => {
         const res = response.data
+        const data = res.data
 
         if (res.code === 401 || res.code === 'A0230') {
             return response
         } else {
-            return res
+            return data
         }
     },
     error => {
