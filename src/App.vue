@@ -14,7 +14,7 @@ import { ref } from "vue";
 const shadowShow = ref(false);
 const handleScroll = function (e: { scrollTop: number }) {
   shadowShow.value = e.scrollTop == 0 ? false : true;
-  console.log("ShadowShow.value", shadowShow.value);
+  // console.log("ShadowShow.value", shadowShow.value);
 };
 </script>
 

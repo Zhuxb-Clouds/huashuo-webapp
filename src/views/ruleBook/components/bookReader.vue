@@ -1,17 +1,17 @@
 <template>
   <div class="book-box">
     <div class="main-view">
-      <div class="left-view">
-        <div class="img-box img-box-left" @click="curPage > 1 ? (curPage -= 1) : null">
-          <img :src="require(`@/assets/images/ruleBook/rule-book-${curPage}.png`)" alt="" />
+      <div class="left-view" @click="curPage > 1 ? (curPage -= 1) : null">
+        <div class="img-box img-box-left">
+          <img :src="pageImageList[curPage - 1].src" alt="" />
         </div>
         <div class="arrow-left arrow" v-if="curPage != 1">
           <el-icon><ArrowLeft /></el-icon>
         </div>
       </div>
-      <div class="right-view">
-        <div class="img-box img-box-right" @click="curPage < 15 ? (curPage += 1) : null">
-          <img :src="require(`@/assets/images/ruleBook/rule-book-${curPage + 1}.png`)" alt="" />
+      <div class="right-view" @click="curPage < 15 ? (curPage += 1) : null">
+        <div class="img-box img-box-right">
+          <img :src="pageImageList[curPage].src" alt="" />
         </div>
         <div class="arrow-right arrow" v-if="curPage != 15">
           <el-icon><ArrowRight /></el-icon>
@@ -36,6 +36,12 @@ const curPage = ref(1);
 const handleCurrentChange = (val: number) => {
   curPage.value = val;
 };
+const pageImageList: Array<HTMLImageElement> = [];
+for (let i = 1; i < 17; i++) {
+  let img = new Image();
+  img.src = require(`@/assets/images/ruleBook/rule-book-${i}.webp`);
+  pageImageList.push(img);
+}
 </script>
 
 <style scoped lang="less">
@@ -54,6 +60,10 @@ const handleCurrentChange = (val: number) => {
   // border: 1px #000 dashed;
   display: flex;
   justify-content: space-between;
+  .right-view,
+  .left-view {
+    cursor: pointer;
+  }
   & > div {
     width: 48%;
     height: 100%;
@@ -69,6 +79,7 @@ const handleCurrentChange = (val: number) => {
         box-shadow: 0.7px 0.8px 3.5px rgba(0, 0, 0, 0.04), 2px 2.3px 9px rgba(0, 0, 0, 0.028),
           4.2px 4.9px 17.5px rgba(0, 0, 0, 0.022), 7.9px 9.2px 30.8px rgba(0, 0, 0, 0.018),
           14.3px 16.7px 52.8px rgba(0, 0, 0, 0.014), 30px 35px 80px rgba(0, 0, 0, 0.01);
+        user-select: none;
       }
     }
     .img-box-left {
