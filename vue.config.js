@@ -19,7 +19,7 @@ module.exports = defineConfig({
         test: /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i,
         threshold: 10240, // 压缩门槛
         minRatio: 0.8, // 最小压缩比
-        deleteOriginalAssets: true, //是否删除原资源，
+        deleteOriginalAssets: false, //是否删除原资源，
         compressionOptions: { level: 6 },
       }),
     ],
