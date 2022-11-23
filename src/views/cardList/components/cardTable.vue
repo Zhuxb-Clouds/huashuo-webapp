@@ -10,7 +10,7 @@
           table-layout="fixed"
           size="large"
         >
-          <el-table-column prop="id" label="卡牌编号" min-width="50" align="center" />
+          <el-table-column type="index" label="序号" min-width="50" align="center" />
           <el-table-column
             prop="front"
             label="卡牌名称"
