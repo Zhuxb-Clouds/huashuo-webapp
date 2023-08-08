@@ -7,7 +7,7 @@
 // }
 
 export interface queryType {
-    type?: number;
+    types?: string;
     pack?: number;
     id?: number;
     pageSize?: number;
