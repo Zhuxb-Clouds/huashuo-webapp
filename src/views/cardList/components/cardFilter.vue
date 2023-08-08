@@ -43,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref, onMounted, defineExpose } from "vue";
 import { mainStore } from "@/store/";
 import { storeToRefs } from "pinia";
 
@@ -60,6 +60,17 @@ function search() {
     keyword: keyword.value,
   });
 }
+function getQuery() {
+  return {
+    types: type.value.join(","),
+    pack: pack.value,
+    keyword: keyword.value,
+  };
+}
+// 暴露函数
+defineExpose({
+  getQuery,
+});
 
 onMounted(() => {
   store.getOption();

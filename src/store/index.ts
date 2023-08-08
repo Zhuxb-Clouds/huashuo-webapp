@@ -9,7 +9,7 @@ export const mainStore = defineStore("main", {
       packOptions: <optionType[]>[],
       cardTableData: <cardType[]>[],
       searchQuery: <queryType>{},
-      cardTableDataTotal: 309,
+      cardTableDataTotal: 0,
       pageSize: 30,
       page: 1,
     };
